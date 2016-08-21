@@ -11,15 +11,19 @@ int main()
 {
 	vector<int>::const_iterator iter;
 	int numbers;
+	char response;
 	vector<int> inputs;
 
-	cout << "Input the integers you need to sort."
-			"\n input z when you have entered all your integers." << endl;
+	cout << "Input the integers you need to sort." << endl;
+
 	do
 	{
+		cout << "Next integer." << endl;
 		cin >> numbers;
 		inputs.push_back(numbers);
-	} while (numbers != -1);
+		cout << "Is there anymore numbers that need to be input? (y or n)" << endl;
+		cin >> response;
+	} while (response != 'n');
 	
 	//shows scores you enter
 	cout << "These are the scores you entered." << endl;
